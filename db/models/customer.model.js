@@ -50,7 +50,7 @@ class Customer extends Model {
     this.hasMany(models.Order, {
       as: 'orders',
       foreignKey: 'customerId',
-    })
+    });
   }
 
   static config(sequelize) {

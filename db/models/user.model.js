@@ -1,4 +1,4 @@
-const { Sequelize, Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Sequelize } = require('sequelize');
 
 const USER_TABLE = 'users';
 
@@ -17,6 +17,11 @@ const UserSchema = {
   password: {
     allowNull: false,
     type: DataTypes.STRING,
+  },
+  recoveryToken: {
+    allowNull: true,
+    type: DataTypes.STRING,
+    field: 'recovery_token',
   },
   role: {
     allowNull: false,
